@@ -40,9 +40,11 @@ movies = [
 ]
 
 def movie_rating(movies_list:list):
-    new_rate=[]
+    
+    new_sort=sorted(movies_list , key= lambda movee : sum(movee[2])/len(movee[2]),reverse=True)
+
     line=1
-    for movie in movies_list:
+    for movie in new_sort:
         avarge_rate = sum(movie[2])/len(movie[2])
         if avarge_rate>6:
             
@@ -50,3 +52,4 @@ def movie_rating(movies_list:list):
             line+=1
 
 movie_rating(movies)
+
