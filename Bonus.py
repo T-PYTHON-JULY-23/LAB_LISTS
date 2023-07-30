@@ -41,8 +41,12 @@ for val in range(0,LMRaverage):
       del movies[val]
    else:
       Movie_add_ave.append(movies[val])
-      Movie_add_ave.append(MRaverage[val])
 LMMovie_add_ave= len(Movie_add_ave)
-for val in range(0,LMRaverage):
-   print(f"{val+1}. {Movie_add_ave[0]} ({Movie_add_ave[1]}) - Avergae rating: {Movie_add_ave[3]} *")
+
+count =0
+"""for val in Movie_add_ave:
+   print(f"{count+1}. {val[0]} ({val[1]}) - Avergae rating: {val[3]} *")
+   count +=1"""
 print(Movie_add_ave)
+
+# i have problem couldn't do part 4 from Q
