@@ -7,28 +7,42 @@ movies = [
     ("The Room", 2003, [1, 2, 3, 4, 5, 1])
 ]
 
-def Movie_Ratings_Analysis(movie):
-    res = [lis[1] for lis in movie]
-    print(str(res))
+def Movie_Ratings_average(movie):
+   rating_list = [lis[2] for lis in movie]
   
-  
-Movie_Ratings_Analysis(movies)
-"""
-    
-    # Python3 code to demonstrate
-# get nth tuple element from list
-# using list comprehension
+   sumTval=0
+   averageTval=[]
+   average=0.0
 
-# initializing list of tuples
-test_list = [(1, 'Rash', 21), (2, 'Varsha', 20), (3, 'Kil', 19)]
+   for list_val in rating_list:
+    lenT= len(list_val)
 
-# printing original list
-print ("The original list is : " + str(test_list))
+    countP=0
 
-# using list comprehension to get names
-res = [lis[1] for lis in test_list]
-	
-# printing result
-print ("List with only nth tuple element (i.e names) : " + str(res))
+    for tuple_val in list_val:
+         countP+=1
+         sumTval+= tuple_val
+         if countP>lenT-1 :
+            average=sumTval/lenT
+            averageTval.append(round(average,2))
+            average=0.0
+            sumTval =0
+   return averageTval
 
-    """
+MRaverage = []
+MRaverage = Movie_Ratings_average(movies)
+
+LMRaverage= len(MRaverage)
+Movie_add_ave = []
+
+for val in range(0,LMRaverage):
+   if MRaverage[val]<6.0:
+      del MRaverage[val]
+      del movies[val]
+   else:
+      Movie_add_ave.append(movies[val])
+      Movie_add_ave.append(MRaverage[val])
+LMMovie_add_ave= len(Movie_add_ave)
+for val in range(0,LMRaverage):
+   print(f"{val+1}. {Movie_add_ave[0]} ({Movie_add_ave[1]}) - Avergae rating: {Movie_add_ave[3]} *")
+print(Movie_add_ave)
