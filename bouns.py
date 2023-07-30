@@ -7,15 +7,17 @@ movies = [
     ("The Room", 2003, [1, 2, 3, 4, 5, 1])
 ]
 
-
-movie1 = movies[0][2]
-
-sum = 0
-for i in movie1:
-     print(i)
-     sum += i
-     average=round(sum/len(movie1),2)
-if average < 6.0:
-     del movie1
-
-print(f"Average rating: {average}")
+movie=0
+for tup in movies:
+     for item in tup:
+          movie = tup[2]
+          sum =0 
+          for i in movie:
+                sum += i
+          average=round(sum/len(movie),2)
+          if average <6:
+               break
+     print(f"{tup[0]} - {tup[1]} - Average rating: {average}")
+        
+    
+       
