@@ -25,3 +25,5 @@ print(odd_num)
 #4
 new_list = my_list[:5]
 print(new_list)
+
+
