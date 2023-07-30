@@ -8,16 +8,20 @@ movies = [
 ]
 
 movie=0
+count=0
 for tup in movies:
+     count += 1
      for item in tup:
           movie = tup[2]
           sum =0 
           for i in movie:
                 sum += i
           average=round(sum/len(movie),2)
-          if average <6:
-               break
-     print(f"{tup[0]} - {tup[1]} - Average rating: {average}")
+     if average <6:
+      break
+
+     print(f"{count}. {tup[0]} - ({tup[1]}) - Average rating: {average} *")
+
         
     
        
