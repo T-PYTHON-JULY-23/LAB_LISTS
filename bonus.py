@@ -23,7 +23,7 @@ while input("You want to add movie ? 'y'Yes or 'n'No :").lower() != 'n':
 # print(movies)
 i= 1
 for movie in movies:
-    rating = round(sum(movie[-1])/6, 2)
+    rating = round(sum(movie[-1])/len(movie[-1]), 2)
     if rating >= 6:
         print(f"{i}. {movie[0]} ({movie[1]}) - Avergae rating: {rating} ★")
         i += 1
