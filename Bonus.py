@@ -8,45 +8,15 @@ movies = [
 ]
 
 def Movie_Ratings_average(movie):
-   rating_list = [lis[2] for lis in movie]
-  
-   sumTval=0
-   averageTval=[]
-   average=0.0
+    count = 1
+    for title, year, rating in movie:
+        average = round(sum(rating) / len(rating), 1)
+        if average > 6:
+            print(f"{count}. {title} ({year}) Average: {average} ★")
+            count += 1
 
-   for list_val in rating_list:
-    lenT= len(list_val)
 
-    countP=0
 
-    for tuple_val in list_val:
-         countP+=1
-         sumTval+= tuple_val
-         if countP>lenT-1 :
-            average=sumTval/lenT
-            averageTval.append(round(average,2))
-            average=0.0
-            sumTval =0
-   return averageTval
+anayalze_movies(movies)
 
-MRaverage = []
-MRaverage = Movie_Ratings_average(movies)
-
-LMRaverage= len(MRaverage)
-Movie_add_ave = []
-
-for val in range(0,LMRaverage):
-   if MRaverage[val]<6.0:
-      del MRaverage[val]
-      del movies[val]
-   else:
-      Movie_add_ave.append(movies[val])
-LMMovie_add_ave= len(Movie_add_ave)
-
-count =0
-"""for val in Movie_add_ave:
-   print(f"{count+1}. {val[0]} ({val[1]}) - Avergae rating: {val[3]} *")
-   count +=1"""
-print(Movie_add_ave)
-
-# i have problem couldn't do part 4 from Q
+   
