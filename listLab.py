@@ -22,13 +22,17 @@ def largest_number(list):
 
 print(largest_number(list))
 
-#Q3 
+#Q3 on normal way
 oddNumbers=[]
 for i in range(1200,2000,125):
     if i%2!=0:
         odd=[i]
         oddNumbers.extend(odd)
 print(f"The odd number from 1200 to 2000 with steps of 125 is:{oddNumbers}")
+
+#soultion of qustion 3 by using list comprehension-->
+add_odd_number=[number for number in range(1200,2000,125)if number%2!=0]
+print(add_odd_number)
 
 #Q4 
 slicinglist=list[:4]
