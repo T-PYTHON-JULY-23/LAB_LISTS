@@ -23,13 +23,9 @@ print(f"the largest number: {max_list(list1)}")
 
 
 # Create an odd numbers list from the elements of a range from 1200 to 2000 with steps of 125, using [ List Comprehension ].
-def odd_number ():
-    new_list = []
-    for ele in range(1200, 2000, 125):
-        new_list.append(ele)
-    return new_list
+odd_number_list = [number for number in range(1200,2000,125) if number%2!=0]
+print(odd_number_list)
 
-print(f"The odd numbers: {odd_number()}")
 
 
 
