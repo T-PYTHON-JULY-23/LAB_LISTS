@@ -16,11 +16,8 @@ def largest_number(list):
 
 #q3 and q4
 def oddnumbers():
- oddNmbrs=[]
- for i in range(1200,2000,125):
-    if i%2!=0:
-        odd=[i]
-        oddNmbrs.extend(odd)
+ oddNmbrs=[ odd for odd in range(1200,2000,125) if odd%2!=0 ]
+       
  print("The odd number from 1200 to 2000 with steps of 125:",oddNmbrs)
  slicinglist=oddNmbrs[:4]
  print("Slicing list: ",slicinglist)
