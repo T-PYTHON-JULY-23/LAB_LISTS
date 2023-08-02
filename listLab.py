@@ -35,5 +35,5 @@ add_odd_number=[number for number in range(1200,2000,125)if number%2!=0]
 print(f"The odd number from 1200 to 2000 with steps of 125 using list comprehensionis:{add_odd_number}")
 
 #Q4 
-slicinglist=list[:4]
+slicinglist=list[:5]
 print(f"Slicing list: {slicinglist} ")
