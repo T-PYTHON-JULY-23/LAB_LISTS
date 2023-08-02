@@ -32,5 +32,5 @@ print(odd_numbers(1200, 2000))
 # a question number 4
 my_list = [2, 3, 4, 5, 15, 1, 43, 20]
 """use list slicing to get a new list from the previous list"""
-new_list = my_list[4:]
+new_list = my_list[:5]
 print(new_list)
