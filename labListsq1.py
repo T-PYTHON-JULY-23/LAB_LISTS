@@ -27,7 +27,7 @@ largestNum(myList)
 
 
 
-#q3
+#Q3
 odd_list=[num for num in range(1200, 2000, 125) if num % 2 != 0]
 print(odd_list)
   

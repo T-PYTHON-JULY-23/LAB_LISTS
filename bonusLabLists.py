@@ -1,7 +1,7 @@
 # *bonus* function to calculate average rating for a movie
 
 def calculate_average_rating(ratings):
-    return int(sum(ratings) / len(ratings))
+    return round(sum(ratings) / len(ratings),2)
 
 movies = [
     ("The Shawshank Redemption", 1994, [9, 10, 10, 9, 8, 9]),
